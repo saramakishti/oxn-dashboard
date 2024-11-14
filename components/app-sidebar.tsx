@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { FileChartLine, Search, Settings, Gauge, FileSliders, Activity } from "lucide-react"
 
 import {
   Sidebar,
@@ -15,33 +15,45 @@ import {
 
 const items = [
   {
-    title: "Home",
+    id: 'dashboard',
+    title: "Dashboard",
     url: "/",
-    icon: Home,
+    icon: Gauge,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    id: 'results',
+    title: "Results & reports",
+    url: "/results-and-reports",
+    icon: FileChartLine,
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    id: 'experiment',
+    title: "Experiment setup",
+    url: "/experiment-setup",
+    icon: FileSliders,
   },
   {
+    id: 'realtime',
+    title: 'Real-time monitoring',
+    url: '/real-time',
+    icon: Activity,
+  },
+  {
+    id: 'search',
     title: "Search",
-    url: "#",
+    url: "/search",
     icon: Search,
   },
   {
+    id: 'settings',
     title: "Settings",
-    url: "#",
+    url: "/settings",
     icon: Settings,
   },
 ]
 
 export function AppSidebar() {
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
